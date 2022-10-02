@@ -8,10 +8,10 @@ import InstagramIcon from '../icons/InstagramIcon';
 import TelegramIcon from '../icons/TelegramIcon';
 
 const SocialIconStyles = {
-    color: 'rgb(26, 26, 197)',
+    color: '#fc4b08',
     transition: '0.3s',
     '&:hover': {
-        color: alpha('rgb(26, 26, 197)', 0.6)
+        color: alpha('#fc4b08', 0.6)
     }
 }
 

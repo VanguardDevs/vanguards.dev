@@ -42,7 +42,7 @@ const Home = () => {
                     fontFamily: 'Roboto Slab',
                     color: 'rgb(26, 26, 197)'
                 }}>
-                    El <br />Macarapanero
+                    VanguardDevs
                 </Box>
             </Box>
             <Box sx={{

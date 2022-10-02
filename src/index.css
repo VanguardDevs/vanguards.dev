@@ -3,7 +3,7 @@ html, body, #root {
 }
 body {
   margin: 0;
-  background-color: rgb(237, 237, 238);
+  background-color: #004aad;
   font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'sans-serif', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
