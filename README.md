@@ -1,5 +1,5 @@
-# Simple building page
+# VanguardDevs Company
 
 Simple building page made with React.js and MUI. Icons from [Simple Icons](https://simpleicons.org/)
 
-[El Macarapanero](https://elmacarapanero.com.ve/)
+[VanguardDevs](https://vanguarddevs.com/)
