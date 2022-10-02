@@ -36,3 +36,5 @@ jobs:
         user: ${{ secrets.FTP_USERNAME }}
         # FTP password
         password: ${{ secrets.FTP_PASSWORD }}
+        localDir: "build"
+        remoteDir: "/home3/vanguard/public_html"
