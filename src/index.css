@@ -1,0 +1,17 @@
+html, body, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: rgb(237, 237, 238);
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'sans-serif', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
