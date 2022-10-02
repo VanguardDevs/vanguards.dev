@@ -27,8 +27,8 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
 
-    - name: Deploy
-      uses: sebastianpopp/ftp-action@v2.0.0
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@4.3.2
       with:
         # FTP host
         host: ${{ secrets.FTP_SERVER }}
@@ -36,5 +36,5 @@ jobs:
         user: ${{ secrets.FTP_USERNAME }}
         # FTP password
         password: ${{ secrets.FTP_PASSWORD }}
-        localDir: "build"
-        remoteDir: "/home3/vanguard/public_html"
+        local-dir: "./build/"
+        server-dir: "public_html/"
