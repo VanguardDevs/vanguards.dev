@@ -33,7 +33,7 @@ jobs:
         # FTP host
         server: ${{ secrets.FTP_SERVER }}
         # FTP user
-        user: ${{ secrets.FTP_USERNAME }}
+        username: ${{ secrets.FTP_USERNAME }}
         # FTP password
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: "./build/"
