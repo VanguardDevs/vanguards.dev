@@ -18,8 +18,10 @@ const BoxContainer = styled(Box)(({ theme }) => ({
     display: 'flex',
     width: '100%',
     justifyContent: 'end',
-    padding: '2rem 0',
+    padding: '1rem 0',
     borderBottom: '1px solid #878787',
+    position: 'fixed',
+    zIndex: 1,
     [theme.breakpoints.down('md')]: {
         padding: '1.5rem 0',
         justifyContent: 'center'
@@ -32,10 +34,12 @@ const Header = () => (
             display: 'flex',
             alignItems: 'center',
             fontWeight: '300',
-            fontSize: '0.9rem',
-            color: '#fff'
+            fontSize: '1rem',
+            color: '#fff',
+            textTransform: 'uppercase',
+            marginRight: '1rem'
         }}>
-            <LocationOnIcon/> Carupano, VE
+            <LocationOnIcon/><Box margin='0 0.25rem' />Carupano,  VE
         </Box>
         <Box sx={{
             padding: '0 1rem',

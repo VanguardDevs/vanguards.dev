@@ -29,10 +29,14 @@ const Footer = () => (
                     fontWeight: '500',
                     textDecoration: 'none',
                     fontSize: '1.05rem',
-                    color: '#fff'
+                    transition: '0.3s',
+                    color: '#fff',
+                    '&:hover': {
+                        color: '#fc4b08'
+                    }
                 }}
             >
-                © 2022 VANGUARDDEVS
+                © 2022 •  VANGUARDDEVS
             </Link>
         </Box>
     </Box>
