@@ -3,10 +3,10 @@ html, body, #root {
 }
 body {
   margin: 0;
-  background-color: #004aad;
-  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'sans-serif', 'Oxygen',
+  background-color: #1e1e1e;
+  font-family: -apple-system, BlinkMacSystemFont, 'Source Sans Pro', 'serif', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

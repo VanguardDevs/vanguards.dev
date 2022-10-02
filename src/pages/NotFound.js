@@ -37,7 +37,6 @@ const NotFound = () => {
                         backgroundColor: 'rgb(26, 26, 197)',
                         color: '#fff',
                         fontWeight: '500',
-                        fontFamily: 'Roboto Slab, sans-serif',
                         padding: '0.5rem 1rem',
                         borderRadius: '8px',
                         '&:hover': {

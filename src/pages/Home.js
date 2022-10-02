@@ -9,7 +9,10 @@ const Home = () => {
         <Box sx={{
             display: 'flex',
             flex: 1,
-            flexDirection: matches ? 'row' : 'column'
+            flexDirection: matches ? 'row' : 'column',
+            color: '#fff',
+            marginTop: '4rem',
+            marginBottom: '4rem'
         }}>
             <Box sx={{
                 display: 'flex',
@@ -24,7 +27,7 @@ const Home = () => {
                     fontSize: '1.5rem',
                     padding: '1rem 0',
                     textTransform: 'uppercase',
-                    borderBottom: '5px solid rgb(26, 26, 197)',
+                    borderBottom: '5px solid #fc4b08',
                     width: '18rem',
                     display: 'flex',
                     fontWeight: 300,
@@ -38,9 +41,8 @@ const Home = () => {
                     width: '15rem',
                     marginTop: '2rem',
                     display: 'flex',
-                    fontWeight: 500,
-                    fontFamily: 'Roboto Slab',
-                    color: 'rgb(26, 26, 197)'
+                    fontWeight: 900,
+                    color: '#fc4b08'
                 }}>
                     VanguardDevs
                 </Box>

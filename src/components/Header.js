@@ -1,5 +1,4 @@
 import Box from '@mui/material/Box'
-import { alpha } from '@mui/material'
 import { styled } from '@mui/material/styles';
 // Icons
 import LocationOnIcon from '@mui/icons-material/LocationOn';
@@ -8,10 +7,10 @@ import InstagramIcon from '../icons/InstagramIcon';
 import TelegramIcon from '../icons/TelegramIcon';
 
 const SocialIconStyles = {
-    color: '#fc4b08',
+    color: '#fff',
     transition: '0.3s',
     '&:hover': {
-        color: alpha('#fc4b08', 0.6)
+        color: '#fc4b08'
     }
 }
 
@@ -19,8 +18,10 @@ const BoxContainer = styled(Box)(({ theme }) => ({
     display: 'flex',
     width: '100%',
     justifyContent: 'end',
-    padding: '1rem 0',
+    padding: '2rem 0',
+    borderBottom: '1px solid #878787',
     [theme.breakpoints.down('md')]: {
+        padding: '1.5rem 0',
         justifyContent: 'center'
     }
 }))
@@ -31,9 +32,10 @@ const Header = () => (
             display: 'flex',
             alignItems: 'center',
             fontWeight: '300',
-            fontSize: '0.9rem'
+            fontSize: '0.9rem',
+            color: '#fff'
         }}>
-            <LocationOnIcon/> Carúpano, Venezuela
+            <LocationOnIcon/> Carupano, VE
         </Box>
         <Box sx={{
             padding: '0 1rem',
