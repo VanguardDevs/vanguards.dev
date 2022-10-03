@@ -23,8 +23,6 @@ const Footer = () => (
         }}>
             <Link
                 href="https://vanguarddevs.com"
-                rel="external"
-                target="_blank"
                 sx={{
                     fontWeight: '500',
                     textDecoration: 'none',
