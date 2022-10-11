@@ -1,24 +1,17 @@
 import Box from '@mui/material/Box'
-import Logo from '../images/logo.png'
-import Background from '../images/background.jpg'
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Video from '../components/Video';
 
 const Home = () => {
     const matches = useMediaQuery((theme) => theme.breakpoints.up('sm'));
 
     return (
         <Box sx={{
-            display: 'flex',
-            flex: 1,
-            flexDirection: matches ? 'row' : 'column',
-            color: '#fff',
-            height: '50%',
-            backgroundSize: 'cover',
-            zIndex: 0,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${Background})`
+            height: '100vh',
+            transition: 'all 0.3s ease-out 0s',
+            position: 'relative'
         }}>
+            <Video />
             <Box sx={{
                 display: 'flex',
                 height: 'fit-content',
@@ -35,8 +28,9 @@ const Home = () => {
                     borderBottom: '5px solid #fc4b08',
                     width: '18rem',
                     display: 'flex',
-                    fontWeight: 300,
-                    paddingBottom: '2rem'
+                    fontWeight: 400,
+                    paddingBottom: '2rem',
+                    color: '#000'
                 }}>
                     Próximamente
                 </Box>
@@ -51,14 +45,6 @@ const Home = () => {
                 }}>
                     VanguardDevs 🚀
                 </Box>
-            </Box>
-            <Box sx={{
-                zIndex: 1,
-                alignSelf: 'center',
-                marginRight: (matches) ? '2rem' : '0',
-                flexGrow: '1'
-            }}>
-                <img src={Logo} width={!matches ? '200px' : '300px'} alt="Logo" />
             </Box>
         </Box>
     );
