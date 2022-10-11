@@ -11,7 +11,8 @@ const Footer = () => (
         flexDirection: 'column',
         fontWeight: '400',
         fontSize: '0.9rem',
-        borderTop: '1px solid #878787',
+        borderTop: '1px solid',
+        borderTopColor: theme => theme.palette.light,
         backgroundColor: '#1e1e1e'
     }}>
         <Box sx={{
@@ -28,9 +29,9 @@ const Footer = () => (
                     textDecoration: 'none',
                     fontSize: '1.05rem',
                     transition: '0.3s',
-                    color: '#fff',
+                    color: theme => theme.palette.text,
                     '&:hover': {
-                        color: '#fc4b08'
+                        color: theme => theme.palette.orange
                     }
                 }}
             >

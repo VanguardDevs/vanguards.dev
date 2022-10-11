@@ -2,10 +2,10 @@ import Box from '@mui/material/Box'
 import { styled } from '@mui/material/styles';
 // Icons
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import LinkedinIcon from '../icons/LinkedinIcon';
-import InstagramIcon from '../icons/InstagramIcon';
-import TelegramIcon from '../icons/TelegramIcon';
-import FacebookIcon from '../icons/FacebookIcon';
+import LinkedinIcon from '../assets/icons/LinkedinIcon';
+import InstagramIcon from '../assets/icons/InstagramIcon';
+import TelegramIcon from '../assets/icons/TelegramIcon';
+import FacebookIcon from '../assets/icons/FacebookIcon';
 
 const SocialIconStyles = {
     color: '#fff',

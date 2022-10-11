@@ -1,6 +1,6 @@
 import Box from '@mui/material/Box'
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Video from '../components/Video';
+import Video from '../../components/Video';
 import TypeWriterEffect from 'react-typewriter-effect';
 
 const phrases = [
@@ -10,7 +10,7 @@ const phrases = [
     '#BeVanguard 🚀'
 ];
 
-const Home = () => {
+const Intro = () => {
     const matches = useMediaQuery((theme) => theme.breakpoints.up('sm'));
 
     return (
@@ -50,4 +50,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Intro;
