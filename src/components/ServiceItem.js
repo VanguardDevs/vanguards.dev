@@ -14,7 +14,19 @@ const ServiceItem = ({ title, description }) => {
             <Box sx={{
                 fontSize: '1.25rem',
                 fontWeight: '600',
-                marginBottom: '1rem'
+                marginBottom: '1rem',
+                position: 'relative',
+                '&::before': {
+                    content: '""',
+                    position: 'absolute',
+                    height: '4px',
+                    left: '0',
+                    width: '4rem',
+                    bottom: '-8px',
+                    zIndex: 1000,
+                    borderRadius: '12px',
+                    background: theme => theme.palette.orange
+                }
             }}>
                 {title}
             </Box>
