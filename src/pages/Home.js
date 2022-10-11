@@ -1,6 +1,14 @@
 import Box from '@mui/material/Box'
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Video from '../components/Video';
+import TypeWriterEffect from 'react-typewriter-effect';
+
+const phrases = [
+    'Construimos productos digitales a la vanguardia.',
+    'Diseñamos soluciones a su medida.',
+    'Desarrollamos websites y aplicaciones extraordinarias.',
+    '#BeVanguard 🚀'
+];
 
 const Home = () => {
     const matches = useMediaQuery((theme) => theme.breakpoints.up('sm'));
@@ -21,30 +29,22 @@ const Home = () => {
                 zIndex: 1000,
                 flexGrow: 2
             }}>
-                <Box sx={{
-                    fontSize: (matches) ? '1.5rem' : '1em',
-                    padding: '1rem 0',
-                    textTransform: 'uppercase',
-                    borderBottom: '5px solid #fc4b08',
-                    width: '18rem',
-                    display: 'flex',
-                    fontWeight: 400,
-                    paddingBottom: '2rem',
-                    color: '#000'
-                }}>
-                    Próximamente
-                </Box>
-                <Box sx={{
-                    fontSize: (matches) ? '3em' : '2.5em',
-                    padding: '1rem 0',
-                    width: (matches) ? '25rem' : '20rem',
-                    marginTop: '2rem',
-                    display: 'flex',
-                    fontWeight: 900,
-                    color: '#fc4b08'
-                }}>
-                    VanguardDevs 🚀
-                </Box>
+                <TypeWriterEffect
+                    textStyle={{
+                        fontSize: (matches) ? '3em' : '2.5em',
+                        padding: '1rem 0',
+                        width: (matches) ? '50%' : '100%',
+                        marginTop: '2rem',
+                        display: 'flex',
+                        fontWeight: 900,
+                        color: '#fc4b08'
+                    }}
+                    cursorColor="#fc4b08"
+                    multiText={phrases}
+                    multiTextDelay={2000}
+                    typeSpeed={50}
+                    multiTextLoop={true}
+                />
             </Box>
         </Box>
     );
