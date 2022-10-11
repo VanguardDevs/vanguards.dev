@@ -20,7 +20,6 @@ const BoxContainer = styled(Box)(({ theme }) => ({
     width: '100%',
     justifyContent: 'end',
     padding: '1rem 0',
-    borderBottom: '1px solid #878787',
     position: 'fixed',
     zIndex: 1,
     [theme.breakpoints.down('md')]: {
@@ -48,16 +47,16 @@ const Header = () => (
                 marginRight: '1rem'
             }
         }}>
-            <a href="https://www.facebook.com/VanguardDevs" title="Facebook" rel="external" target="_blank">
+            <a href="https://www.facebook.com/VanguardDevs" title="Facebook" target="_blank" rel='noreferrer'>
                 <FacebookIcon sx={SocialIconStyles} />
             </a>
-            <a href="https://www.linkedin.com/company/vanguarddevs" title="LinkedIn" rel="external" target="_blank">
+            <a href="https://www.linkedin.com/company/vanguarddevs" title="LinkedIn" target="_blank" rel='noreferrer'>
                 <LinkedinIcon sx={SocialIconStyles} />
             </a>
-            <a href="https://www.instagram.com/vanguarddevs/" title="Instagram" rel="external" target="_blank">
+            <a href="https://www.instagram.com/vanguarddevs/" title="Instagram" target="_blank" rel='noreferrer'>
                 <InstagramIcon sx={SocialIconStyles} />
             </a>
-            <a href="https://t.me/VanguardDevs" rel="external" target="_blank" title="Telegram">
+            <a href="https://t.me/VanguardDevs" target="_blank" rel='noreferrer' title="Telegram">
                 <TelegramIcon sx={SocialIconStyles} />
             </a>
         </Box>
