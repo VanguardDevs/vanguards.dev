@@ -5,6 +5,7 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import LinkedinIcon from '../icons/LinkedinIcon';
 import InstagramIcon from '../icons/InstagramIcon';
 import TelegramIcon from '../icons/TelegramIcon';
+import FacebookIcon from '../icons/FacebookIcon';
 
 const SocialIconStyles = {
     color: '#fff',
@@ -47,13 +48,16 @@ const Header = () => (
                 marginRight: '1rem'
             }
         }}>
-            <a href="https://www.linkedin.com/company/vanguarddevs" rel="external" target="_blank">
+            <a href="https://www.facebook.com/VanguardDevs" title="Facebook" rel="external" target="_blank">
+                <FacebookIcon sx={SocialIconStyles} />
+            </a>
+            <a href="https://www.linkedin.com/company/vanguarddevs" title="LinkedIn" rel="external" target="_blank">
                 <LinkedinIcon sx={SocialIconStyles} />
             </a>
-            <a href="https://www.instagram.com/vanguarddevs/" rel="external" target="_blank">
+            <a href="https://www.instagram.com/vanguarddevs/" title="Instagram" rel="external" target="_blank">
                 <InstagramIcon sx={SocialIconStyles} />
             </a>
-            <a href="https://t.me/VanguardDevs" rel="external" target="_blank">
+            <a href="https://t.me/VanguardDevs" rel="external" target="_blank" title="Telegram">
                 <TelegramIcon sx={SocialIconStyles} />
             </a>
         </Box>
