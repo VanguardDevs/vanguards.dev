@@ -5,9 +5,8 @@ import { Route, Routes } from 'react-router-dom'
 // Components
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-const theme = createTheme();
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './components/theme';
 
 function App() {
     return (
