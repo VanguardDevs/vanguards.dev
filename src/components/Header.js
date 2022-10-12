@@ -15,7 +15,7 @@ const BoxContainer = styled(Box)(({ theme }) => ({
     }
 }))
 
-const AnchorTag = styled('a')(({ theme }) => ({
+const AnchorTag = styled('a')(() => ({
     textDecoration: 'none',
     padding: '1rem',
     fontWeight: '600',
@@ -30,10 +30,6 @@ const internalLinks = [
     {
         title: 'Portfolio',
         link: '/#projects'
-    },
-    {
-        title: 'Team',
-        link: '/#team'
     },
     {
         title: 'Contacto',

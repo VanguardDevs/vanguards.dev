@@ -1,18 +1,25 @@
 import Box from '@mui/material/Box'
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ServiceItem from '../../components/ServiceItem';
+// Icons
+import CubeIcon from '../../assets/images/Cube.png'
+import PaintSprayIcon from '../../assets/images/PaintSpray.png'
+import CodingIcon from '../../assets/images/Coding.png'
 
 const servicesArr = [
     {
         title: 'Diseño Gráfico',
+        icon: PaintSprayIcon,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
         title: 'Desarrollo web',
+        icon: CodingIcon,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
         title: 'Soluciones a la medida',
+        icon: CubeIcon,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }
 ]
@@ -52,6 +59,7 @@ const Intro = () => {
                         <ServiceItem
                             title={service.title}
                             description={service.description}
+                            icon={service.icon}
                         />
                     ))}
                 </Box>
