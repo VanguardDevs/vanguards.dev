@@ -5,15 +5,15 @@ import ServiceItem from '../../components/ServiceItem';
 const servicesArr = [
     {
         title: 'Diseño Gráfico',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean pharetra magna ac placerat vestibulum lectus mauris ultrices. At imperdiet dui accumsan sit amet. Massa vitae tortor condimentum lacinia quis vel eros donec ac.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
         title: 'Desarrollo web',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean pharetra magna ac placerat vestibulum lectus mauris ultrices. At imperdiet dui accumsan sit amet. Massa vitae tortor condimentum lacinia quis vel eros donec ac.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
         title: 'Soluciones a la medida',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aenean pharetra magna ac placerat vestibulum lectus mauris ultrices. At imperdiet dui accumsan sit amet. Massa vitae tortor condimentum lacinia quis vel eros donec ac.'
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }
 ]
 
