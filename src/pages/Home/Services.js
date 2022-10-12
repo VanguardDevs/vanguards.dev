@@ -5,6 +5,7 @@ import ServiceItem from '../../components/ServiceItem';
 import CubeIcon from '../../assets/images/Cube.png'
 import PaintSprayIcon from '../../assets/images/PaintSpray.png'
 import CodingIcon from '../../assets/images/Coding.png'
+import LayersIcon from '../../assets/images/Layers.png'
 
 const servicesArr = [
     {
@@ -20,6 +21,11 @@ const servicesArr = [
     {
         title: 'Soluciones a la medida',
         icon: CubeIcon,
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    },
+    {
+        title: 'Mantenimiento & Soporte',
+        icon: LayersIcon,
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }
 ]
@@ -53,7 +59,8 @@ const Intro = () => {
                     height: '100%',
                     alignItems: matches ? 'center' : 'unset',
                     flexDirection: matches ? 'row' : 'column',
-                    justifyContent: 'space-between'
+                    justifyContent: 'space-between',
+                    flexWrap: 'wrap'
                 }}>
                     {servicesArr.map(service => (
                         <ServiceItem

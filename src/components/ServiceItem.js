@@ -10,7 +10,7 @@ const ServiceItem = ({ title, description, icon }) => {
             marginTop: '1rem',
             color: theme => theme.palette.text,
             textAlign: 'left',
-            width: '20rem',
+            width: matches ? '50%' : '100%',
             display: 'flex',
             flexDirection: matches ? 'column' : 'row-reverse',
             alignItems: 'center'
