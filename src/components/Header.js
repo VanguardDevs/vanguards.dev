@@ -1,19 +1,6 @@
 import Box from '@mui/material/Box'
 import { styled } from '@mui/material/styles';
 // Icons
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import LinkedinIcon from '../assets/icons/LinkedinIcon';
-import InstagramIcon from '../assets/icons/InstagramIcon';
-import TelegramIcon from '../assets/icons/TelegramIcon';
-import FacebookIcon from '../assets/icons/FacebookIcon';
-
-const SocialIconStyles = {
-    color: '#fff',
-    transition: '0.3s',
-    '&:hover': {
-        color: '#fc4b08'
-    }
-}
 
 const BoxContainer = styled(Box)(({ theme }) => ({
     display: 'flex',
@@ -28,8 +15,34 @@ const BoxContainer = styled(Box)(({ theme }) => ({
     }
 }))
 
+const AnchorTag = styled('a')(({ theme }) => ({
+    textDecoration: 'none',
+    padding: '1rem',
+    fontWeight: '600',
+    color: '#fff'
+}))
+
+const internalLinks = [
+    {
+        title: 'Servicios',
+        link: '/#services',
+    },
+    {
+        title: 'Portfolio',
+        link: '/#projects'
+    },
+    {
+        title: 'Team',
+        link: '/#team'
+    },
+    {
+        title: 'Contacto',
+        link: '/#contact'
+    }
+]
+
 const Header = () => (
-    <BoxContainer>
+    <BoxContainer component='navbar'>
         <Box sx={{
             display: 'flex',
             alignItems: 'center',
@@ -37,28 +50,14 @@ const Header = () => (
             fontSize: '1rem',
             color: '#fff',
             textTransform: 'uppercase',
-            marginRight: '1rem'
-        }}>
-            <LocationOnIcon/><Box margin='0 0.25rem' />Carupano,  VE
-        </Box>
-        <Box sx={{
-            padding: '0 1rem',
-            '&>*': {
-                marginRight: '1rem'
-            }
-        }}>
-            <a href="https://www.facebook.com/VanguardDevs" title="Facebook" target="_blank" rel='noreferrer'>
-                <FacebookIcon sx={SocialIconStyles} />
-            </a>
-            <a href="https://www.linkedin.com/company/vanguarddevs" title="LinkedIn" target="_blank" rel='noreferrer'>
-                <LinkedinIcon sx={SocialIconStyles} />
-            </a>
-            <a href="https://www.instagram.com/vanguarddevs/" title="Instagram" target="_blank" rel='noreferrer'>
-                <InstagramIcon sx={SocialIconStyles} />
-            </a>
-            <a href="https://t.me/VanguardDevs" target="_blank" rel='noreferrer' title="Telegram">
-                <TelegramIcon sx={SocialIconStyles} />
-            </a>
+            marginRight: '1rem',
+            listStyle: 'none'
+        }} component='ul'>
+            {internalLinks.map(link => (
+                <li>
+                    <AnchorTag aria-label={link.title} href={link.link}>{link.title}</AnchorTag>
+                </li>
+            ))}
         </Box>
     </BoxContainer>
 );

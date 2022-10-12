@@ -26,7 +26,7 @@ const Intro = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
-        }}>
+        }} id='services'>
             <Box sx={{
                 width: matches ? '80%' : '100%',
                 height: matches ? '80vh' : '90',

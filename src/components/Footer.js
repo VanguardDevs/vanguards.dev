@@ -1,27 +1,28 @@
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
+import Socials from './Socials';
 
 const Footer = () => (
     <Box sx={{
         display: 'flex',
         width: '100%',
-        justifyContent: 'start',
+        height: 'fit-content',
+        justifyContent: 'space-between',
         padding: '2rem 0',
         borderBottom: '1px solid gray',
         flexDirection: 'column',
+        alignItems: 'center',
         fontWeight: '400',
         fontSize: '0.9rem',
         borderTop: '1px solid',
         borderTopColor: theme => theme.palette.light,
-        backgroundColor: '#1e1e1e'
+        backgroundColor: '#1e1e1e',
+        '&>*': {
+            marginBottom: '1rem'
+        }
     }}>
-        <Box sx={{
-            display: 'flex',
-            alignItems: 'center',
-            alignSelf: 'center',
-            width: '13rem',
-            justifyContent: 'space-between'
-        }}>
+        <Socials />
+        <Box>
             <Link
                 href="https://vanguarddevs.com"
                 sx={{
@@ -37,6 +38,15 @@ const Footer = () => (
             >
                 © 2022 •  VANGUARDDEVS
             </Link>
+        </Box>
+        <Box sx={{
+            color: theme => theme.palette.text,
+            fontWeight: '500',
+            textDecoration: 'none',
+            fontSize: '1.05rem',
+            transition: '0.3s',
+        }}>
+            Made with 🧡 in Carupano, VE
         </Box>
     </Box>
 );

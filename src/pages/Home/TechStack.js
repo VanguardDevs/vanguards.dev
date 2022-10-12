@@ -28,7 +28,7 @@ const arrayIcons = [
     <PWAIcon />
 ]
 
-const Intro = () => {
+const TechStack = () => {
     const matches = useMediaQuery((theme) => theme.breakpoints.up('sm'));
 
     return (
@@ -63,4 +63,4 @@ const Intro = () => {
     );
 }
 
-export default Intro;
+export default TechStack;
