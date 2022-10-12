@@ -24,10 +24,6 @@ const arrayIcons = [
     },
     {
         icon: <NodeIcon />,
-        title: 'Node'
-    },
-    {
-        icon: <NodeIcon />,
         title: 'Node.js'
     },
     {
@@ -98,7 +94,7 @@ const TechStack = () => {
                 fontWeight: '900',
                 marginTop: '1.5rem'
             }}>
-                CON EL STACK TECNOLÓGICO MÁS AVANZADO
+                CON EL <em>TECH STACK</em> MÁS AVANZADO
             </Box>
             <Box sx={{
                 display: 'flex',
@@ -109,11 +105,12 @@ const TechStack = () => {
                 alignItems: 'center',
                 width: '80%'
             }}>
-                {arrayIcons.map(item =>
+                {arrayIcons.map((item, i) =>
                     <TechStackIcon
                         icon={item.icon}
                         title={item.title}
                         isLarge={matches}
+                        key={i}
                     />
                 )}
             </Box>
