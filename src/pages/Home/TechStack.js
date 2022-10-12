@@ -57,7 +57,7 @@ const TechStack = () => {
                 alignItems: 'center',
                 width: '80%'
             }}>
-                {arrayIcons.map(icon => <TechStackIcon icon={icon} />)}
+                {arrayIcons.map(icon => <TechStackIcon icon={icon} isLarge={matches} />)}
             </Box>
         </Box>
     );
