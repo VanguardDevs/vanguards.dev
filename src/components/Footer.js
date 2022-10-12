@@ -6,16 +6,14 @@ const Footer = () => (
     <Box sx={{
         display: 'flex',
         width: '100%',
-        height: 'fit-content',
+        height: '10vh',
         justifyContent: 'space-between',
-        padding: '2rem 0',
-        borderBottom: '1px solid gray',
+        padding: '5vh 0',
+        border: 'none',
         flexDirection: 'column',
         alignItems: 'center',
         fontWeight: '400',
         fontSize: '0.9rem',
-        borderTop: '1px solid',
-        borderTopColor: theme => theme.palette.light,
         backgroundColor: '#1e1e1e',
         '&>*': {
             marginBottom: '1rem'
