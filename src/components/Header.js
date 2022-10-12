@@ -29,7 +29,7 @@ const internalLinks = [
     },
     {
         title: 'Portfolio',
-        link: '/#projects'
+        link: '/#portfolio'
     },
     {
         title: 'Contacto',
