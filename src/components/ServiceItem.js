@@ -7,7 +7,7 @@ const ServiceItem = ({ title, description, icon }) => {
 
     return (
         <Box sx={{
-            marginTop: '1rem',
+            marginTop: matches ? '0' : '1rem',
             color: theme => theme.palette.text,
             textAlign: 'left',
             width: matches ? '50%' : '100%',
@@ -21,15 +21,15 @@ const ServiceItem = ({ title, description, icon }) => {
                 borderRadius: '6px',
                 width: 'fit-content',
                 height: 'fit-content',
-                alignSelf: 'center'
+                textAlign: 'center'
             }}>
                 <img
                     src={icon}
-                    height={matches ? '64px' : '32px'}
-                    width={matches ? '64px' : '32px'}
+                    height={matches ? '64px' : '48px'}
+                    width={matches ? '64px' : '48px'}
                 />
             </Box>
-            <Box margin={matches ? '3rem 0' : '0 1rem'}>
+            <Box margin={matches ? '3rem 0' : '0 1rem 1rem 0'}>
                 <Box sx={{
                     fontSize: '1.25rem',
                     fontWeight: '600',
@@ -50,7 +50,7 @@ const ServiceItem = ({ title, description, icon }) => {
                     {title}
                 </Box>
                 <Box sx={{
-                    fontSize: matches ? '1.1rem' : '1rem'
+                    fontSize: '1.1rem'
                 }}>
                     {description}
                 </Box>
