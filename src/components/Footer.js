@@ -44,7 +44,7 @@ const Footer = () => (
             fontSize: '1.05rem',
             transition: '0.3s',
         }}>
-            Made with 🧡 in Carupano, VE
+            Made with 🧡 in Venezuela
         </Box>
     </Box>
 );

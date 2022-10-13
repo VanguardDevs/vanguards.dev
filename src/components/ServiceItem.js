@@ -50,7 +50,8 @@ const ServiceItem = ({ title, description, icon }) => {
                     {title}
                 </Box>
                 <Box sx={{
-                    fontSize: '1.1rem'
+                    fontSize: '1.1rem',
+                    paddingRight: matches ? '1.5rem' : '0'
                 }}>
                     {description}
                 </Box>
