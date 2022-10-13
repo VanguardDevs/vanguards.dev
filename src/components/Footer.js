@@ -28,9 +28,9 @@ const Footer = () => (
                     textDecoration: 'none',
                     fontSize: '1.05rem',
                     transition: '0.3s',
-                    color: theme => theme.palette.text,
+                    color: theme => theme.palette.secondary.main,
                     '&:hover': {
-                        color: theme => theme.palette.orange
+                        color: theme => theme.palette.primary.main
                     }
                 }}
             >
@@ -38,7 +38,7 @@ const Footer = () => (
             </Link>
         </Box>
         <Box sx={{
-            color: theme => theme.palette.text,
+            color: theme => theme.palette.secondary.main,
             fontWeight: '500',
             textDecoration: 'none',
             fontSize: '1.05rem',

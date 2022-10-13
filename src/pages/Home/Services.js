@@ -46,7 +46,7 @@ const Intro = () => {
                 margin: '0 2rem'
             }}>
                 <Box sx={{
-                    color: theme => theme.palette.orange,
+                    color: theme => theme.palette.primary.main,
                     fontSize: matches ? '3rem' : '2rem',
                     fontWeight: '900'
                 }}>

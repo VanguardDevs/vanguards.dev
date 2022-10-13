@@ -1,5 +1,6 @@
 import Box from '@mui/material/Box'
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Form from '../../components/Form';
 import Map from '../../components/Map'
 
 const Intro = () => {
@@ -20,12 +21,13 @@ const Intro = () => {
                 paddingTop: '8vh'
             }}>
                 <Box sx={{
-                    color: theme => theme.palette.orange,
+                    color: theme => theme.palette.primary.main,
                     fontSize: matches ? '3rem' : '2rem',
                     fontWeight: '900'
                 }}>
                     Contáctanos
                 </Box>
+                <Form />
             </Box>
             <Box sx={{
                 height: 'fit-content',

@@ -42,7 +42,7 @@ const TechStack = () => {
             alignItems: 'center',
             flexDirection: 'column',
             padding: '2rem',
-            backgroundColor: theme => theme.palette.text
+            backgroundColor: theme => theme.palette.secondary.main
         }}>
             <Box sx={{
                 color: theme => theme.palette.black,
