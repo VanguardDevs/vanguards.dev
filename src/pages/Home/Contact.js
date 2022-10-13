@@ -1,34 +1,6 @@
 import Box from '@mui/material/Box'
 import useMediaQuery from '@mui/material/useMediaQuery';
-import ServiceItem from '../../components/ServiceItem';
-// Icons
-import CubeIcon from '../../assets/images/Cube.png'
-import PaintSprayIcon from '../../assets/images/PaintSpray.png'
-import CodingIcon from '../../assets/images/Coding.png'
-import LayersIcon from '../../assets/images/Layers.png'
-
-const servicesArr = [
-    {
-        title: 'Diseño Gráfico',
-        icon: PaintSprayIcon,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    {
-        title: 'Desarrollo web',
-        icon: CodingIcon,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    {
-        title: 'Soluciones a la medida',
-        icon: CubeIcon,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    {
-        title: 'Mantenimiento & Soporte',
-        icon: LayersIcon,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    }
-]
+import Map from '../../components/Map'
 
 const Intro = () => {
     const matches = useMediaQuery((theme) => theme.breakpoints.up('sm'));
@@ -56,11 +28,10 @@ const Intro = () => {
                 </Box>
             </Box>
             <Box sx={{
-                flex: 1,
-                backgroundColor: '#fff',
-                height: '100%'
+                height: 'fit-content',
+                flex: 1
             }}>
-
+                <Map />
             </Box>
         </Box>
     );
