@@ -2,6 +2,7 @@ import Box from '@mui/material/Box'
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Video from '../../components/Video';
 import TypeWriterEffect from 'react-typewriter-effect';
+import { Link } from 'react-scroll'
 
 const phrases = [
     'Construimos productos digitales a la vanguardia.',
@@ -45,6 +46,30 @@ const Intro = () => {
                     typeSpeed={50}
                     multiTextLoop={true}
                 />
+            </Box>
+            <Box to='contact' smooth={true} spy={true} duration={500} component={Link} sx={{
+                position: 'absolute',
+                bottom: '35vh',
+                left: '2rem',
+                fontWeight: 900,
+                fontSize: '1.1rem',
+                textTransform: 'capitalize',
+                textDecoration: 'none',
+                background: 'transparent',
+                padding: '0.6rem 0.8rem',
+                borderRadius: '8px',
+                borderColor: theme => theme.palette.primary.main,
+                borderStyle: 'solid',
+                borderWidth: '0.15em',
+                transition: '.3s',
+                cursor: 'pointer',
+                color: theme => theme.palette.secondary.main,
+                backgroundColor: theme => theme.palette.primary.main,
+                '&:hover': {
+                    boxShadow: '0px 1px 10px 3px #888888'
+                }
+            }}>
+                Contáctanos
             </Box>
         </Box>
     );

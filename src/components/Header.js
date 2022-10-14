@@ -1,61 +1,93 @@
+import * as React from 'react'
 import Box from '@mui/material/Box'
 import { styled } from '@mui/material/styles';
-// Icons
+import { Link } from 'react-scroll'
+import TransparentLogo from '../assets/images/transparent.png'
 
-const BoxContainer = styled(Box)(({ theme }) => ({
+const BoxContainer = styled(Box)(({ theme, isScroll }) => ({
     display: 'flex',
     width: '100%',
-    justifyContent: 'end',
-    padding: '1rem 0',
+    justifyContent: isScroll ? 'space-between' : 'end',
+    padding: '0 1rem',
     position: 'fixed',
-    zIndex: 1,
+    alignItems: 'center',
+    zIndex: 1000,
+    backgroundColor: isScroll ? `${theme.palette.secondary.dark}` : 'transparent',
     [theme.breakpoints.down('md')]: {
         padding: '1.5rem 0',
         justifyContent: 'center'
     }
 }))
 
-const AnchorTag = styled('a')(() => ({
+const AnchorTag = styled(Link)(({ theme }) => ({
     textDecoration: 'none',
     padding: '1rem',
     fontWeight: '600',
-    color: '#fff'
+    color: `${theme.palette.secondary.main}`,
+    cursor: 'pointer',
+    transition: '0.3s',
+    '&:hover': {
+        color: `${theme.palette.primary.main}`,
+    }
 }))
 
 const internalLinks = [
     {
         title: 'Servicios',
-        link: '/#services',
+        link: 'services',
     },
     {
         title: 'Portfolio',
-        link: '/#projects'
+        link: 'portfolio'
     },
     {
         title: 'Contacto',
-        link: '/#contact'
+        link: 'contact'
     }
 ]
 
-const Header = () => (
-    <BoxContainer component='navbar'>
-        <Box sx={{
-            display: 'flex',
-            alignItems: 'center',
-            fontWeight: '300',
-            fontSize: '1rem',
-            color: '#fff',
-            textTransform: 'uppercase',
-            marginRight: '1rem',
-            listStyle: 'none'
-        }} component='ul'>
-            {internalLinks.map(link => (
-                <li>
-                    <AnchorTag aria-label={link.title} href={link.link}>{link.title}</AnchorTag>
-                </li>
-            ))}
-        </Box>
-    </BoxContainer>
-);
+const Header = () => {
+    const [color, setColor] = React.useState(false)
+
+    const changeColor = () => {
+        if (window.scrollY >= window.innerHeight) {
+            setColor(true)
+        } else {
+            setColor(false)
+        }
+    }
+
+    window.addEventListener('scroll', changeColor);
+
+    return (
+        <BoxContainer component='navbar' isScroll={color}>
+            {color && <img src={TransparentLogo} height='50px' width='50px' />}
+            <Box sx={{
+                display: 'flex',
+                alignItems: 'center',
+                fontWeight: '300',
+                fontSize: '1rem',
+                color: '#fff',
+                textTransform: 'uppercase',
+                marginRight: '1rem',
+                listStyle: 'none'
+            }} component='ul'>
+                {internalLinks.map(link => (
+                    <li>
+                        <AnchorTag
+                            aria-label={link.title}
+                            to={link.link}
+                            spy={true}
+                            duration={500}
+                            smooth={true}
+                        >
+                            {link.title}
+                        </AnchorTag>
+                    </li>
+                ))}
+            </Box>
+        </BoxContainer>
+    );
+}
 
 export default Header;

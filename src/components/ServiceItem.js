@@ -8,7 +8,7 @@ const ServiceItem = ({ title, description, icon }) => {
     return (
         <Box sx={{
             marginTop: matches ? '0' : '1rem',
-            color: theme => theme.palette.text,
+            color: theme => theme.palette.secondary.main,
             textAlign: 'left',
             width: matches ? '50%' : '100%',
             display: 'flex',
@@ -16,7 +16,7 @@ const ServiceItem = ({ title, description, icon }) => {
             alignItems: 'center'
         }}>
             <Box sx={{
-                backgroundColor: theme => theme.palette.orange,
+                backgroundColor: theme => theme.palette.primary.main,
                 padding: '1rem',
                 borderRadius: '6px',
                 width: 'fit-content',
@@ -44,13 +44,14 @@ const ServiceItem = ({ title, description, icon }) => {
                         bottom: '-8px',
                         zIndex: 1000,
                         borderRadius: '12px',
-                        background: theme => theme.palette.orange
+                        background: theme => theme.palette.primary.main
                     }
                 }}>
                     {title}
                 </Box>
                 <Box sx={{
-                    fontSize: '1.1rem'
+                    fontSize: '1.1rem',
+                    paddingRight: matches ? '1.5rem' : '0'
                 }}>
                     {description}
                 </Box>

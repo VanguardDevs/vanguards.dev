@@ -12,3 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.leaflet-container {
+    height: 38vh;
+}
+
+@media only screen and (min-width: 600px) {
+    .leaflet-container {
+        height: 80vh;
+    }
+}
