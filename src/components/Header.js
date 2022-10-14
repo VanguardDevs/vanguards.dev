@@ -2,13 +2,15 @@ import * as React from 'react'
 import Box from '@mui/material/Box'
 import { styled } from '@mui/material/styles';
 import { Link } from 'react-scroll'
-
+import TransparentLogo from '../assets/images/transparent.png'
 
 const BoxContainer = styled(Box)(({ theme, isScroll }) => ({
     display: 'flex',
     width: '100%',
-    justifyContent: 'end',
+    justifyContent: isScroll ? 'space-between' : 'end',
+    padding: '0 1rem',
     position: 'fixed',
+    alignItems: 'center',
     zIndex: 1000,
     backgroundColor: isScroll ? `${theme.palette.secondary.dark}` : 'transparent',
     [theme.breakpoints.down('md')]: {
@@ -22,7 +24,11 @@ const AnchorTag = styled(Link)(({ theme }) => ({
     padding: '1rem',
     fontWeight: '600',
     color: `${theme.palette.secondary.main}`,
-    cursor: 'pointer'
+    cursor: 'pointer',
+    transition: '0.3s',
+    '&:hover': {
+        color: `${theme.palette.primary.main}`,
+    }
 }))
 
 const internalLinks = [
@@ -55,6 +61,7 @@ const Header = () => {
 
     return (
         <BoxContainer component='navbar' isScroll={color}>
+            {color && <img src={TransparentLogo} height='50px' width='50px' />}
             <Box sx={{
                 display: 'flex',
                 alignItems: 'center',

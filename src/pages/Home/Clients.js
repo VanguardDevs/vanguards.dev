@@ -5,30 +5,23 @@ import TechStackIcon from '../../components/TechStackIcon';
 import LaravelIcon from '../../assets/icons/LaravelIcon'
 import NodeIcon from '../../assets/icons/NodeIcon'
 import ReactIcon from '../../assets/icons/ReactIcon'
-import MongodbIcon from '../../assets/icons/MongodbIcon'
-import PhpIcon from '../../assets/icons/PhpIcon'
-import PythonIcon from '../../assets/icons/PythonIcon'
-import PostgresIcon from '../../assets/icons/PostgresIcon'
-import GithubActionsIcon from '../../assets/icons/GithubActionsIcon'
-import CpanelIcon from '../../assets/icons/CpanelIcon'
-import DigitalOceanIcon from '../../assets/icons/DigitalOceanIcon'
-import PWAIcon from '../../assets/icons/PWAIcon';
-import MUIIcon from '../../assets/icons/MUIIcon';
-import SocketIoIcon from '../../assets/icons/SocketIoIcon';
-import DockerIcon from '../../assets/icons/DockerIcon';
+import SumatLogo from '../../assets/images/sumat.png'
+import MacarapaneroLogo from '../../assets/images/macarapanero.png'
 
 const arrayIcons = [
     {
-        icon: <LaravelIcon />,
-        title: 'Laravel'
+        icon: SumatLogo,
+        title: 'SUMAT',
+        to: '/',
+        height: '120px',
+        width: '300px'
     },
     {
-        icon: <NodeIcon />,
-        title: 'Node.js'
-    },
-    {
-        icon: <ReactIcon />,
-        title: 'React.js'
+        icon: MacarapaneroLogo,
+        title: 'Macarapanero',
+        to: 'https://elmacarapanero.com.ve',
+        height: '120px',
+        width: '120px'
     }
 ]
 
@@ -61,14 +54,15 @@ const TechStack = () => {
                 alignItems: 'center',
                 width: '80%'
             }}>
-                {arrayIcons.map((item, i) =>
-                    <TechStackIcon
-                        icon={item.icon}
-                        title={item.title}
-                        isLarge={matches}
-                        key={i}
-                    />
-                )}
+                {arrayIcons.map((item, i) => (
+                    <Box sx={{
+                        padding: '1rem 2rem'
+                    }}>
+                        <a href={item.to} target='_blank' title={item.title}>
+                            <img src={item.icon} height={item.height} width={item.width} />
+                        </a>
+                    </Box>
+                ))}
             </Box>
         </Box>
     );
