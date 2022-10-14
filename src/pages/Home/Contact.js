@@ -8,17 +8,19 @@ const Intro = () => {
 
     return (
         <Box sx={{
-            height: '80vh',
+            height: matches ? '80vh' : '100vh',
             display: 'flex',
-            justifyContent: 'center',
+            justifyContent: matches,
+            alignItems: 'space-between',
             flexDirection: matches ? 'row' : 'column',
             border: 'none'
         }} id='contact'>
             <Box sx={{
                 flex: 1,
-                paddingLeft: '4rem',
+                paddingLeft: matches ? '4rem' : '2rem',
                 height: '100%',
-                paddingTop: '8vh'
+                paddingTop: '12vh',
+                paddingBottom: '3vh'
             }}>
                 <Box sx={{
                     color: theme => theme.palette.primary.main,
