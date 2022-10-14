@@ -11,33 +11,50 @@ const Form = () => {
         <Box
             component="form"
             sx={{
-                '& > :not(style)': {
-                    m: 1,
-                },
+                paddingRight: '2rem'
             }}
             noValidate
             autoComplete="off"
             type="submit"
         >
-            <FormControl variant="standard">
+            <FormControl variant="standard" sx={{ width: '100%' }}>
                 <Label name='nombre'>
                     Nombre (*)
                 </Label>
-                <Input id="nombre" type='text' fullWidth />
+                <Input
+                    id="nombre"
+                    type='text'
+                    name='name'
+                    placeholder='Escribe tu nombre'
+                    autoComplete='name'
+                />
             </FormControl>
-            <FormControl variant="standard">
+            <FormControl variant="standard" sx={{ width: '100%' }}>
                 <Label name='email'>
-                    Correo (*)
+                    Correo electrónico (*)
                 </Label>
-                <Input id="email" type="email" fullWidth />
+                <Input
+                    id="email"
+                    type='email'
+                    name='email'
+                    autoComplete='email'
+                    placeholder='example@domain.com'
+                />
             </FormControl>
-            <FormControl variant="standard">
-                <Label name='message'>
+            <FormControl variant="standard" sx={{ width: '100%' }}>
+                <Label name='email'>
                     Mensaje (*)
                 </Label>
-                <TextField id="email" multiline fullWidth />
+                <Input
+                    id="email"
+                    name='message'
+                    type='text'
+                    placeholder='¡Buen día! Un gusto encontrarlos...'
+                    rows={2}
+                    multiline
+                />
             </FormControl>
-            <Box>
+            <Box marginTop='1rem'>
                 <Button
                     variant="contained"
                     sx={{
