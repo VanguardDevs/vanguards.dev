@@ -2,8 +2,6 @@ import Box from '@mui/material/Box'
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Video from '../../components/Video';
 import TypeWriterEffect from 'react-typewriter-effect';
-import Button from '@mui/material/Button'
-import { Link } from 'react-router-dom'
 
 const phrases = [
     'Construimos productos digitales a la vanguardia.',
