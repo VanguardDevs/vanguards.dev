@@ -1,7 +1,8 @@
 import * as React from 'react'
 import Box from '@mui/material/Box'
 import { styled } from '@mui/material/styles';
-// Icons
+import { Link } from 'react-scroll'
+
 
 const BoxContainer = styled(Box)(({ theme, isScroll }) => ({
     display: 'flex',
@@ -16,25 +17,26 @@ const BoxContainer = styled(Box)(({ theme, isScroll }) => ({
     }
 }))
 
-const AnchorTag = styled('a')(({ theme }) => ({
+const AnchorTag = styled(Link)(({ theme }) => ({
     textDecoration: 'none',
     padding: '1rem',
     fontWeight: '600',
-    color: `${theme.palette.secondary.main}`
+    color: `${theme.palette.secondary.main}`,
+    cursor: 'pointer'
 }))
 
 const internalLinks = [
     {
         title: 'Servicios',
-        link: '/#services',
+        link: 'services',
     },
     {
         title: 'Portfolio',
-        link: '/#portfolio'
+        link: 'portfolio'
     },
     {
         title: 'Contacto',
-        link: '/#contact'
+        link: 'contact'
     }
 ]
 
@@ -65,7 +67,15 @@ const Header = () => {
             }} component='ul'>
                 {internalLinks.map(link => (
                     <li>
-                        <AnchorTag aria-label={link.title} href={link.link}>{link.title}</AnchorTag>
+                        <AnchorTag
+                            aria-label={link.title}
+                            to={link.link}
+                            spy={true}
+                            duration={500}
+                            smooth={true}
+                        >
+                            {link.title}
+                        </AnchorTag>
                     </li>
                 ))}
             </Box>

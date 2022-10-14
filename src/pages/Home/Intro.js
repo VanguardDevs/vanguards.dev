@@ -2,6 +2,7 @@ import Box from '@mui/material/Box'
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Video from '../../components/Video';
 import TypeWriterEffect from 'react-typewriter-effect';
+import { Link } from 'react-scroll'
 
 const phrases = [
     'Construimos productos digitales a la vanguardia.',
@@ -46,7 +47,7 @@ const Intro = () => {
                     multiTextLoop={true}
                 />
             </Box>
-            <Box href='#contact' component='a' sx={{
+            <Box to='contact' smooth={true} spy={true} duration={500} component={Link} sx={{
                 position: 'absolute',
                 bottom: '35vh',
                 left: '2rem',
@@ -61,6 +62,7 @@ const Intro = () => {
                 borderStyle: 'solid',
                 borderWidth: '0.15em',
                 transition: '.3s',
+                cursor: 'pointer',
                 color: theme => theme.palette.secondary.main,
                 backgroundColor: theme => theme.palette.primary.main,
                 '&:hover': {
