@@ -3,6 +3,7 @@ import LinkedinIcon from '../assets/icons/LinkedinIcon';
 import InstagramIcon from '../assets/icons/InstagramIcon';
 import TelegramIcon from '../assets/icons/TelegramIcon';
 import FacebookIcon from '../assets/icons/FacebookIcon';
+import GithubIcon from '../assets/icons/GithubIcon';
 
 const SocialIconStyles = {
     color: '#fff',
@@ -30,6 +31,9 @@ const Socials = () => (
         </a>
         <a href="https://t.me/VanguardDevs" target="_blank" rel='noreferrer' title="Telegram">
             <TelegramIcon sx={SocialIconStyles} />
+        </a>
+        <a href="https://www.github.com/VanguardDevs" title="Github" target="_blank" rel='noreferrer'>
+            <GithubIcon sx={SocialIconStyles} />
         </a>
     </Box>
 );
