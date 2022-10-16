@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { alpha, styled } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 
@@ -24,8 +23,7 @@ const Input = styled(TextField)(({ theme }) => ({
             'box-shadow',
         ], {
             duration: '0.1s',
-            delay: '0.1s',
-            easin: '0.1s'
+            delay: '0.1s'
         })
     },
 }));
