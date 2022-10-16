@@ -23,7 +23,7 @@ const Form = () => {
             message: messageRef.current.value
         }
 
-        let response = await fetch("http://localhost:4000/api/contact", {
+        let response = await fetch(`${process.env.REACT_APP_CONTACT_API}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
@@ -31,17 +31,12 @@ const Form = () => {
             body: JSON.stringify(data),
         });
 
-        let result = await response.json();
-
-        if (result.status) {
+        if (response.status >= 200 && response.status < 300) {
             setStatus('success');
-            return;
+        } else {
+            setStatus('error')
         }
-
-        setStatus('success')
     }
-
-    console.log(status)
 
     return (
         <Box
@@ -122,19 +117,25 @@ const Form = () => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     height: '20vh',
-                    width: '100%'
+                    width: '100%',
+                    color: theme => theme.palette.secondary.main,
+                    fontSize: '1.1rem'
                 }}>
-                    {(status == 'submitting') && (
+                    {(status == 'submitting') ? (
                         <CircularProgress size={75} />
-                    )}
-                    {(status == 'success') && (
-                        <Box sx={{
-                            color: theme => theme.palette.secondary.main,
-                            fontSize: '1.1rem'
-                        }}>
-                            ¡Genial! Hemos recibido su correo.
-                            Estate atento para más notificaciones.
-                        </Box>
+                    ) : (
+                        <>
+                            {(status == 'success') ? (
+                                <Box>
+                                    ¡Genial! Hemos recibido su correo.
+                                    Estate atento para más notificaciones.
+                                </Box>
+                            ) : (
+                                <Box>
+                                    ¡Lo sentimos! Ha ocurrido un error en su solicitud.
+                                </Box>
+                            )}
+                        </>
                     )}
                 </Box>
             )}

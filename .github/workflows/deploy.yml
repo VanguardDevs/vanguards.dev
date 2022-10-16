@@ -1,8 +1,16 @@
 name: Publish React.js website to CPANEL
 
 on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Razón'
+        required: true
   push:
     branches: [ "main" ]
+
+env:
+  REACT_APP_CONTACT_API: ${{ secrets.REACT_APP_CONTACT_API }}
 
 jobs:
   build:
