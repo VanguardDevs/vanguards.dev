@@ -10,7 +10,13 @@ const theme = createTheme({
             light: '#878787',
             dark: '#1e1e1e'
         }
-    }
+    },
+    typography: {
+        fontFamily: [
+            'Source Sans Pro',
+            'sans-serif',
+        ].join(','),
+    },
 });
 
 export default theme;

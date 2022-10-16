@@ -2,8 +2,8 @@ import * as React from 'react'
 import Box from '@mui/material/Box'
 import Tooltip from '@mui/material/Tooltip'
 
-const TechStackIcon = ({ icon, isLarge, title }) => (
-    <Tooltip title={title} sx={{ backgroundColor: theme => theme.palette.primary.main }} key={title}>
+const TechStackIcon = ({ icon, isLarge, title, i }) => (
+    <Tooltip title={title} sx={{ backgroundColor: theme => theme.palette.primary.main }} key={i}>
         <Box sx={{
             color: theme => theme.palette.primary.main,
             margin: isLarge ? '1.5rem' : '1rem',
