@@ -20,9 +20,6 @@ const Socials = () => (
             marginRight: '1rem'
         }
     }}>
-        <a href="https://www.facebook.com/VanguardDevs" title="Facebook" target="_blank" rel='noreferrer'>
-            <FacebookIcon sx={SocialIconStyles} />
-        </a>
         <a href="https://www.linkedin.com/company/vanguarddevs" title="LinkedIn" target="_blank" rel='noreferrer'>
             <LinkedinIcon sx={SocialIconStyles} />
         </a>
