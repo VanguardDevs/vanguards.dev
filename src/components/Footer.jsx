@@ -26,7 +26,7 @@ const Footer = () => {
             <Socials />
             <Box>
                 <Link
-                    href="https://vanguarddevs.com"
+                    href="https://vanguards.dev"
                     sx={{
                         fontWeight: '500',
                         textDecoration: 'none',
