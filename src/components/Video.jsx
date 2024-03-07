@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles';
+import videoFile from '../assets/videos/intro.mp4'
 
 const FigureContainer = styled('figure')(() => ({
     position: 'absolute',
@@ -16,7 +17,7 @@ const Video = styled('video')(() => ({
 
 const VideoContainer = () => (
     <FigureContainer>
-        <Video src={require('../assets/videos/intro.mp4')} loop autoPlay muted />
+        <Video src={videoFile} loop autoPlay muted />
     </FigureContainer>
 )
 

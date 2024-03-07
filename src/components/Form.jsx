@@ -23,7 +23,7 @@ const Form = () => {
             message: messageRef.current.value
         }
 
-        let response = await fetch(`${process.env.REACT_APP_CONTACT_API}`, {
+        let response = await fetch(`${import.meta.env.REACT_APP_CONTACT_API}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
